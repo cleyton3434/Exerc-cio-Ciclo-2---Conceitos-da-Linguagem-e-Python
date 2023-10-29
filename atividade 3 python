@@ -1,0 +1,16 @@
+atividade 3 python
+
+
+
+#3) Faça um programa que leia 3 números inteiros e mostre o menor deles.
+
+# Um exemplo solicitar ao usuário que insira três números inteiros
+numero1 = int(input("Digite o primeiro número inteiro: "))
+numero2 = int(input("Digite o segundo número inteiro: "))
+numero3 = int(input("Digite o terceiro número inteiro: "))
+
+# Encontrar o menor número usando a função min()
+menor = min(numero1, numero2, numero3)
+
+# Exibir o menor número
+print(f"O menor número é: {menor}") 
