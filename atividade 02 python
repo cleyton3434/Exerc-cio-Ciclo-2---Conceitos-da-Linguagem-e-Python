@@ -1,0 +1,33 @@
+atividade 02 python
+
+
+
+# Elaborar um programa que lê 3 valores a,b,c e verifica se eles formam
+# ou não um triângulo. Supor que os valores lidos são inteiros e positivos. Caso
+# os valores formem um triângulo, calcular e escrever a área deste triângulo. Se
+# não formam triângulo escrever os valores lidos. (Se a &gt; b + c não formam
+# triângulo algum, se a é o maior).
+
+# Solicitar ao usuário que insira três valores inteiros positivos
+a = int(input("Digite o valor de 'a': "))
+b = int(input("Digite o valor de 'b': "))
+c = int(input("Digite o valor de 'c': "))
+
+# Verificar se a é o maior valor e se a > b + c
+if a > b + c:
+    # Se a for o maior e a condição não for atendida, os valores não formam um triângulo
+    print("Os valores lidos não formam um triângulo (a é o maior.")
+else:
+    # Verificar se os valores formam um triângulo com base nas desigualdades triangulares
+    if a + b > c and a + c > b and b + c > a:
+        # Calcular o semiperímetro (metade do perímetro)
+        s = (a + b + c) / 2
+
+        # Calcular a área usando a fórmula de Heron
+        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+
+        # Exibir a área do triângulo
+        print(f"Os valores formam um triângulo com área igual a {area:.2f}")
+    else:
+        # Caso não formem um triângulo, exibir os valores lidos
+        print("Os valores lidos não formam um triângulo.")
