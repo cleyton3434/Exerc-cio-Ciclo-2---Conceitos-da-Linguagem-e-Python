@@ -1,0 +1,23 @@
+atividade 05 python
+
+
+'''Escreva uma função que:
+a) Receba uma frase como parâmetro.
+b) Retorne uma nova frase com cada palavra com as letras invertidas.'''
+
+
+def inverter_letras_palavras(frase):
+    palavras = frase.split()  # Divide a frase em uma lista de palavras
+    palavras_invertidas = []
+
+    for palavra in palavras:
+        palavra_invertida = palavra[::-1]  # Inverte as letras de cada palavra
+        palavras_invertidas.append(palavra_invertida)
+
+    nova_frase = ' '.join(palavras_invertidas)  # Recria a frase com as palavras invertidas
+    return nova_frase
+
+# Exemplo de uso:
+frase_original = "Eu gosto de  comer bolo"
+frase_invertida = inverter_letras_palavras(frase_original)
+print(frase_invertida)
